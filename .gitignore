@@ -1,0 +1,12 @@
+# Ignorar entornos virtuales
+venv/
+env/
+
+# Ignorar archivos de configuración de entorno
+.env
+.env.local
+.env.*.local
+config.py
+
+# Ignorar variables de instancia
+*.instance
