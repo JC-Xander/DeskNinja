@@ -10,3 +10,4 @@ config.py
 
 # Ignorar variables de instancia
 *.instance
+__pycache__/

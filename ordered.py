@@ -41,8 +41,11 @@ EXTENSIONS = {
     'WORD': ['doc', 'docx'],
     'PRESENTATION': ['ppt', 'pptx'],
     'COMPRESSED': ['zip', 'rar', '7z', 'tar', 'gz'],
-    'CODE': ['py', 'js', 'html', 'css', 'php', 'java', 'c', 'cpp', 'cs', 'rb', 'go', 'cpp', 'md']
+    'CODE': ['py', 'js', 'html', 'css', 'php', 'java', 'c', 'cpp', 'cs', 'rb', 'go', 'cpp', 'md'],
+    'EXCEL': ['xls', 'xlsx']
 }
+
+file_ignore = ['desktop.ini', 'Thumbs.db', 'compressed', 'No Organizados']
 
 if __name__ == '__main__':
     # Iterar sobre los archivos y directorios del escritorio  
@@ -54,6 +57,7 @@ if __name__ == '__main__':
         new_path = None
 
         # Organizando archivos
+        if file_name in file_ignore: continue
         if os.path.isfile(file_path):
             new_path = classify_and_move_file(file_name)
         else:
